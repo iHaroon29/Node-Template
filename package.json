@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": " SET NODE_ENV=development& nodemon index.js",
-    "start": "SET NODE_ENV=production& node index.js "
+    "start": "SET NODE_ENV=production& node index.js ",
+    "compile": "solcjs --bin --include-path node_modules/ --base-path . ./contracts/record.sol"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +20,15 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "go-ipfs": "^0.19.1",
     "helmet": "^6.0.1",
+    "ipfs-core": "^0.18.0",
+    "ipfs-http-client": "^60.0.0",
     "mongoose": "^6.8.4",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-seal": "^5.1.1",
+    "orbit-db": "^0.29.0",
+    "solc": "^0.8.19",
+    "ws": "^8.13.0"
   }
 }
